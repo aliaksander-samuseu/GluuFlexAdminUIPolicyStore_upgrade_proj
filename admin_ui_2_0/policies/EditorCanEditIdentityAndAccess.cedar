@@ -1,8 +1,7 @@
 @id("EditorCanEditIdentityAndAccess")
 permit (
   principal,
-  action in [GluuFlexAdminUI::Action::"read",
-  GluuFlexAdminUI::Action::"write"],
+  action in GluuFlexAdminUI::Action::"read",
   resource in GluuFlexAdminUIResources::ParentResource::"IdentityAndAccess"
 )
 when {
