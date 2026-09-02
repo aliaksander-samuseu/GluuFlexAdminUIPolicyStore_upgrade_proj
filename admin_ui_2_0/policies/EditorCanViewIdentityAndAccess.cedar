@@ -1,4 +1,4 @@
-@id("EditorCanEditIdentityAndAccess")
+@id("EditorCanViewIdentityAndAccess")
 permit (
   principal,
   action in GluuFlexAdminUI::Action::"read",
