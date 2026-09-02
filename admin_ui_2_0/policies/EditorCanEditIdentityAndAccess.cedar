@@ -1,9 +1,9 @@
-@id("EditorCanEditAuthServerConfiguration")
+@id("EditorCanEditIdentityAndAccess")
 permit (
   principal,
   action in [GluuFlexAdminUI::Action::"read",
   GluuFlexAdminUI::Action::"write"],
-  resource in GluuFlexAdminUIResources::ParentResource::"AuthServerAndConfiguration"
+  resource in GluuFlexAdminUIResources::ParentResource::"IdentityAndAccess"
 )
 when {
     context has tokens.gluuflexadminui_userinfo_token &&
