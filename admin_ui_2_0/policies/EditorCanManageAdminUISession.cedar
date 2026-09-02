@@ -1,4 +1,4 @@
-@id("AuditorCanManageAdminUISession")
+@id("EditorCanManageAdminUISession")
 permit (
   principal,
   action in [GluuFlexAdminUI::Action::"read",
@@ -9,5 +9,5 @@ permit (
 when {
     context has tokens.gluuflexadminui_userinfo_token &&
     context.tokens.gluuflexadminui_userinfo_token.hasTag("jansAdminUIRole") &&
-    context.tokens.gluuflexadminui_userinfo_token.getTag("jansAdminUIRole").contains("auditor")
+    context.tokens.gluuflexadminui_userinfo_token.getTag("jansAdminUIRole").contains("api-editor")
 };
