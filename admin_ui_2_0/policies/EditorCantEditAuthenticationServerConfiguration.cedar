@@ -1,8 +1,8 @@
-@id("EditorCantEditConfigAPIProperties")
+@id("EditorCantEditAuthenticationServerConfiguration")
 forbid (
   principal,
   action in GluuFlexAdminUI::Action::"write",
-  resource in GluuFlexAdminUIResources::Features::"ConfigAPIProperties"
+  resource in GluuFlexAdminUIResources::Features::"AuthenticationServerConfiguration"
 )
 when {
     context has tokens.gluuflexadminui_userinfo_token &&
